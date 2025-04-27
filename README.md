@@ -3,7 +3,7 @@
 
 #    Custom Command Bash 
 
-      git clone https://github.com/sayed-elhawary/Task-Fawry/blob/master/mygrep.sh
+      git clone https://github.com/sayed-elhawary/Fawry.git
 
 #     command line This Is Permesstion execute User 
 
