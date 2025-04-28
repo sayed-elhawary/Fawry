@@ -78,3 +78,23 @@ Example: In bind9, you can modify the DNS config file to include:
 # 
 ![Screenshot 2025-04-28 024156](https://github.com/user-attachments/assets/ece8739a-de0e-45be-b3cc-16228b4e1776)
 
+
+#  Conected to DNS
+   dig internal.example.com
+#
+
+![Screenshot 2025-04-28 125655](https://github.com/user-attachments/assets/e84f0b61-a933-4776-a1f7-6fec24fa1882)
+
+#
+dig @172.18.0.1 internal.example.com
+#
+
+![Screenshot 2025-04-28 125825](https://github.com/user-attachments/assets/60bb129a-b81d-4c02-832e-1d749ea16b63)
+#
+telnet internal.example.com 80
+#
+![Screenshot 2025-04-28 130248](https://github.com/user-attachments/assets/fedee8e5-f110-4fd5-b508-6c09b05d4a22)
+# 
+ping internal.example.com
+#
+![Screenshot 2025-04-28 130319](https://github.com/user-attachments/assets/be5c8757-d635-4e5d-84ff-b4f22a8f81ef)
