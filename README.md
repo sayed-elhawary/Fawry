@@ -80,12 +80,12 @@ Example: In bind9, you can modify the DNS config file to include:
 
 #  Conected to DNS
 
-dig -x 192.168.75.137 @127.0.0.1 
+      dig -x 192.168.75.137 @127.0.0.1 
 #
 ![Screenshot 2025-04-28 164004](https://github.com/user-attachments/assets/c1859e5f-89c5-4503-919b-6576d51d9ca6)
 
 #
-dig -x 192.168.75.137 @127.0.0.1 +short#
+      dig -x 192.168.75.137 @127.0.0.1 +short#
 
 ![Screenshot 2025-04-28 164251](https://github.com/user-attachments/assets/ea974c95-20b1-4148-a58d-b361cdb36d03)
 
@@ -94,38 +94,39 @@ dig -x 192.168.75.137 @127.0.0.1 +short#
 ![Screenshot 2025-04-28 164104](https://github.com/user-attachments/assets/391e6865-bdf9-49da-afb3-c1ecb14ee67e)
 
 #
-dig +short internal.example.com
+      dig +short internal.example.com
 
 # 
-ping internal.example.com
+      ping internal.example.com
 #
 ![Screenshot 2025-04-28 164141](https://github.com/user-attachments/assets/8b00b3e7-18f7-4a68-9b3f-25a6fdad0fd5)
 # 
-curl -v http://internal.example.com
+      curl -v http://internal.example.com
 #
 ![Screenshot 2025-04-28 163017](https://github.com/user-attachments/assets/080b57f0-b108-4fbe-9b8a-16d8dd0356a3)
 #
-telnet internal.example.com 80
+     telnet internal.example.com 80
 #
 ![Screenshot 2025-04-28 163408](https://github.com/user-attachments/assets/540cd1e8-c4a6-4873-b1c1-fbea98d77a36)
 
 # Firewall Blocking
-sudo iptables -L -n | grep 53
-sudo iptables -L -n | grep 80
-sudo iptables -L -n | grep 443
+     sudo iptables -L -n | grep 53
+     sudo iptables -L -n | grep 80
+     sudo iptables -L -n | grep 443
 
 # Routing Issues
-traceroute internal.example.com
+     traceroute internal.example.com
 #
 ![Screenshot 2025-04-28 165054](https://github.com/user-attachments/assets/5d698a2d-76c8-49df-8157-945b9efe2b69)
 
 # SELinux or Firewall Restrictions
-sudo getenforce
-sudo setenforce 0
+     sudo getenforce
+#
+     sudo setenforce 0
 
 #  Test
-ping internal.example.com
-curl http://internal.example.com
+      ping internal.example.com
+      curl http://internal.example.com
 #
 ![Screenshot 2025-04-28 164141](https://github.com/user-attachments/assets/c88d3214-6a73-48fe-b6d0-543fc9f8e604)
 
@@ -133,10 +134,10 @@ curl http://internal.example.com
 ![Screenshot 2025-04-28 163017](https://github.com/user-attachments/assets/2a1492a4-7693-4720-8ab9-b66ccd8a0cfa)
 
 # Persist DNS Settings (Systemd-resolved)
-vim /etc/systemd/resolved.conf
+      vim /etc/systemd/resolved.conf
 #
-[Resolve]
-DNS=192.168.138.2
-FallbackDNS=8.8.8.8
+         [Resolve]
+          DNS=192.168.138.2
+          FallbackDNS=8.8.8.8
 # restart service 
-sudo systemctl restart systemd-resolved
+     sudo systemctl restart systemd-resolved
