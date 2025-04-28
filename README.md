@@ -60,8 +60,8 @@ Here’s an example implementation:
 Description: This method is simple and effective when working in a local environment or if you need a quick solution to map a domain to a specific IP address without setting up a full DNS server.
 
 How it works: You simply add the line that links the domain with the IP address in the /etc/hosts file.
+![Screenshot 2025-04-28 141753](https://github.com/user-attachments/assets/76a81647-061a-4e37-b255-189728b49c1c)
 
-![Screenshot 2025-04-28 021738](https://github.com/user-attachments/assets/5ccab78f-c5c7-428d-8f8f-1c5c2ef637cb)
 
 # Using bind9
 
@@ -76,25 +76,23 @@ Example: In bind9, you can modify the DNS config file to include:
 
 
 # 
-![Screenshot 2025-04-28 024156](https://github.com/user-attachments/assets/ece8739a-de0e-45be-b3cc-16228b4e1776)
 
+![Screenshot 2025-04-28 142142](https://github.com/user-attachments/assets/ef521288-4f33-49b3-b3c8-5baa2eae0e7c)
 
 #  Conected to DNS
-   dig internal.example.com
-#
 
-![Screenshot 2025-04-28 125655](https://github.com/user-attachments/assets/e84f0b61-a933-4776-a1f7-6fec24fa1882)
+dig -x 192.168.75.132 @127.0.0.1 
+#
+![Screenshot 2025-04-28 140748](https://github.com/user-attachments/assets/f9249abb-27b0-4f90-9185-d9bd49d83eba)
+#
+dig -x 192.168.75.132 @127.0.0.1 +short#
+#
+![Screenshot 2025-04-28 140152](https://github.com/user-attachments/assets/4035cf34-4688-4371-b9f3-a7dce82ffc7a)
 
-#
-dig @172.18.0.1 internal.example.com
-#
-
-![Screenshot 2025-04-28 125825](https://github.com/user-attachments/assets/60bb129a-b81d-4c02-832e-1d749ea16b63)
-#
-telnet internal.example.com 80
 #
 ![Screenshot 2025-04-28 130248](https://github.com/user-attachments/assets/fedee8e5-f110-4fd5-b508-6c09b05d4a22)
 # 
 ping internal.example.com
 #
-![Screenshot 2025-04-28 130319](https://github.com/user-attachments/assets/be5c8757-d635-4e5d-84ff-b4f22a8f81ef)
+
+![Screenshot 2025-04-28 141553](https://github.com/user-attachments/assets/db920925-d51b-4c84-9899-9bc9ba4cb868)
